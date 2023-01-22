@@ -29,5 +29,5 @@ pip install cookiecutter
 
 Create a project based on the template:
 ```bash
-cookiecutter https://github.com/khuyentran1401/data-science-template
+cookiecutter https://github.com/lucasbagge/pyspark-template
 ```

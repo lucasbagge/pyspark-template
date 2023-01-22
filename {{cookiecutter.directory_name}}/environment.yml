@@ -1,0 +1,30 @@
+# Environment Setup ----
+
+# Conda Environment Setup Instructions ----
+#  - Using an environment.yml file with conda
+#  - Key Terminal Commands:
+# 
+#    conda env create -f environment.yml
+#    conda env update --file environment.yml 
+#    conda env export --name lab_XX_envname > envname.yml
+#    conda env remove --name lab_XX_envname
+#    conda env list
+
+name: pysparkenv
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9.1
+  - pip
+  - pip:
+      - numpy==1.20.2
+      - pandas==1.2.2
+      - matplotlib==3.3.4
+      - plotly==5.3.1
+      - koalas==1.8.2
+      - pyspark==3.2.0
+      # Jupyter
+      - ipykernel
+      - nbformat

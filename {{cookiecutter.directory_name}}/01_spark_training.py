@@ -44,23 +44,6 @@ spark.version
 # SPARK WEB UI ----
 # - Should be running on localhost:4050
 # - Will use this to examine memory usage, jobs, and data cache
-spark
-
-
-# 1.0 PYSPARK PANDAS
-#  - Available in PySpark v3.2.0
-
-# PYSPARK PANDAS
-ps.DataFrame(
-    {'a': [1, 2, 3, 4, 5, 6],
-     'b': [100, 200, 300, 400, 500, 600],
-     'c': ["one", "two", "three", "four", "five", "six"]},
-    index=[10, 20, 30, 40, 50, 60])
-
-mtcars_df = ps.read_csv("01-data-raw/mtcars.csv")
-mtcars_df.head()
-
-type(mtcars_df)
 
 # NASDAQ ANALYSIS ----
 # - About the data: 
@@ -68,7 +51,7 @@ type(mtcars_df)
 #   This was done in Lab 65: Spark in R
 #   It contains 5.8M rows & 4000 time series groups
 
-nasdaq_df = ps.read_csv("01-data-raw/nasdaq_data.csv")
+nasdaq_df = ps.read_csv(r'/Users/lucasbagge/Documents/Projects/business\ sciecne\ /lab_66_pyspark/01-data-raw/nasdaq_data.csv')
 nasdaq_df.head()
 
 nasdaq_df.shape
@@ -151,7 +134,7 @@ nasdaq_agg_df = nasdaq_agg_df.spark.local_checkpoint()
 
 # JOIN NASDAQ INDEX META DATA ----
 
-nasdaq_index_df = ps.read_csv('01-data-raw/nasdaq_index.csv')
+nasdaq_index_df = ps.read_csv(r'/Users/lucasbagge/Documents/Projects/business\ sciecne\ /lab_66_pyspark/01-data-raw/nasdaq_index.csv')
 
 nasdaq_index_df.head()
 
